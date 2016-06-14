@@ -2,7 +2,8 @@ classdef CatEEGInterface
     % This class creates and upholds a link to the EEG computer to that
     % messages can be sent to it that indicate several events
     
-    properties
+    properties (Access = protected, Constant = true)
+        port = '378';
     end
     
     methods

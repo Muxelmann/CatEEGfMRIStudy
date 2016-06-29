@@ -7,7 +7,7 @@ A MATLAB & Psychtoolbox based application, displaying a grid of squares for a vi
 1. Download the Psychtoolbox MATLAB code from [here](http://psychtoolbox.org/download/) and save it in a directory of your choice.
 2. Then download and install Subversion.
 3. For Windows make sure Microsoft Runtime Libraries for MSVC 2010 or later are installed.
-4. Execute `DownloadPsychtoolbox('C:\path_to_dir')` in MATLAB to download and install the toolbox
+4. Execute `DownloadPsychtoolbox('C:\install_path')` in MATLAB to download and install the toolbox
 
 The link to Psychtoolbox can be found [here](http://psychtoolbox.org). All information concerning its installation on different platforms can be found there, too.
 
@@ -33,7 +33,7 @@ Readme.md | N | This readme file containing all information to get started.
 @CatStudy | Y | MATLAB class folder containing the entire study's code to present the visual stimuli. The class is called `CatStudy` and consists of several files that are all stored within this directory.
 CatEEGInterface.m | N | MATLAB class that (soon) provides an interface to sent notifications to an EEG computer so that the recording is time-stamped / time-marked. This class is used within `CatStudy`.
 run.m | N | A sample MATLAB code, demonstrating how to use the `CatStudy` class. This code runs through a single study, consisting of several blocks where each block contains several consecutive trials.
-DownloadPsychtoolbox | N | A copy of the Psychtoolbox installer that was downloaded for ease of installation. This file was obtained on the 7th of June 2016 from [here](http://psychtoolbox.org/download/#installation).
+~~DownloadPsychtoolbox~~ | N | A copy of the Psychtoolbox installer that was downloaded for ease of installation. This file was obtained on the 7th of June 2016 from [here](http://psychtoolbox.org/download/#installation). **This file was removed since installation should be done as instructed on the Psychtoolbox website...**
 
 ## Trial execution
 

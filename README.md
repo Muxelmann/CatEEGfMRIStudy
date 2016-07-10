@@ -4,12 +4,10 @@ A MATLAB & Psychtoolbox based application, displaying a grid of squares for a vi
 # Getting started quickly
 
 ## Psychtoolbox installation
-1. Download the Psychtoolbox MATLAB code from [here](http://psychtoolbox.org/download/) and save it in a directory of your choice.
-2. Then download and install Subversion.
-3. For Windows make sure Microsoft Runtime Libraries for MSVC 2010 or later are installed.
-4. Execute `DownloadPsychtoolbox('C:\install_path')` in MATLAB to download and install the toolbox
-
-The link to Psychtoolbox can be found [here](http://psychtoolbox.org). All information concerning its installation on different platforms can be found there, too.
+1. Get the Psychtoolbox MATLAB code from [here](http://psychtoolbox.org/download/) and follow the install instructions.
+2. Then download and install Git to obtain this project code.
+3. Clone the Git repository (i.e. code) with the shell command: ``git clone https://github.com/Muxelmann/CatEEGfMRIStudy``
+4. If you already cloned the project and want to update its code, change the directory into ``CatEEGfMRIStudy`` (i.e. ``cd CatEEGfMRIStudy``) and execute ``git pull``.
 
 ## Functionality
 The `run.m` file contains sample code to run through a block of trials.
@@ -18,7 +16,11 @@ Every single file is commented and should be very self-explanatory.
 
 ## TODOs
 - Add a "pause" screen to display in between blocks
+- Fix the quarter colouring and question/answer text to match the subject's input mechanism
 - Write the EEG interface to send time signals to EEG computer over some COM/Serial/Parallel port
+- Write finite state machine (FSM) to keep track of the trial progress for the EEG interface
+- Upgrade the difficulty mechanism to instead of basing it on the past N trials (i.e. moving average)
+- Send mark instructions via the EEG interface whilst conducting pilot trials
 
 <!-- more -->
 
@@ -33,7 +35,6 @@ Readme.md | N | This readme file containing all information to get started.
 @CatStudy | Y | MATLAB class folder containing the entire study's code to present the visual stimuli. The class is called `CatStudy` and consists of several files that are all stored within this directory.
 CatEEGInterface.m | N | MATLAB class that (soon) provides an interface to sent notifications to an EEG computer so that the recording is time-stamped / time-marked. This class is used within `CatStudy`.
 run.m | N | A sample MATLAB code, demonstrating how to use the `CatStudy` class. This code runs through a single study, consisting of several blocks where each block contains several consecutive trials.
-~~DownloadPsychtoolbox~~ | N | A copy of the Psychtoolbox installer that was downloaded for ease of installation. This file was obtained on the 7th of June 2016 from [here](http://psychtoolbox.org/download/#installation). **This file was removed since installation should be done as instructed on the Psychtoolbox website...**
 
 ## Trial execution
 

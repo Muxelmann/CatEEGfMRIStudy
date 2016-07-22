@@ -14,6 +14,13 @@ The `run.m` file contains sample code to run through a block of trials.
 The `CatStudy` Class is used and it provides all the functionality to interface with Psychtoolbox and draw all squares etc.
 Every single file is commented and should be very self-explanatory.
 
+## Ideas
+Rather than using buttons for the four quadrants to answer where the colour change was perceived, use a joystick. Apparently to obtain the joystick input use:
+
+``[x, y, z, buttons] = WinJoystickMex(0);``
+
+But we will investigate that after consolidating with the project's leading neuroscientist / psychologist.
+
 ## TODOs
 - Add a "pause" screen to display in between blocks
 - Fix the quarter colouring and question/answer text to match the subject's input mechanism

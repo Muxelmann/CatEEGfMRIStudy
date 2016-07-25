@@ -29,8 +29,6 @@ for frame = 1:framesToWait
             keyCode = tmpkeyCode(1);
             % Obtain which button was pressed
             button = self.decodeKeyCode(keyCode);
-            
-            self.eegInterface.
         end
     end
 end

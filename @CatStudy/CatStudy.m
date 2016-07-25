@@ -37,12 +37,10 @@ classdef CatStudy
         % Background colour
         % 0 = black
         % 1 = white (do not use white)
-        backgroundColour = 0.25;
+        backgroundColour = 0.0;
         
         % The answering rectangles coordinates
         answerRects
-        % The answering rectangle colours
-        answerRectColours = [1 0 0 1; 0 1 0 1; 1 1 0 1; 0 0 1 1]';
         % The answering rectangle labels
         answerRectLabels = ['1'; '2'; '3'; '4'];
         % Coordinates where the answer labels are displayed

@@ -14,22 +14,22 @@ The `run.m` file contains sample code to run through a block of trials.
 The `CatStudy` Class is used and it provides all the functionality to interface with Psychtoolbox and draw all squares etc.
 Every single file is commented and should be very self-explanatory.
 
-## Ideas
-Rather than using buttons for the four quadrants to answer where the colour change was perceived, use a joystick. Apparently to obtain the joystick input use:
-
-``[x, y, z, buttons] = WinJoystickMex(0);``
-
-But we will investigate that after consolidating with the project's leading neuroscientist / psychologist.
-
 ## TODOs
+- Either add non-changing squares along the centre and middle axis or increase the gap between top and bottom, and left and right squares
 - Add a "pause" screen to display in between blocks
-- Fix the quarter colouring and question/answer text to match the subject's input mechanism
 - Write the EEG interface to send time signals to EEG computer over some COM/Serial/Parallel port
 - Write finite state machine (FSM) to keep track of the trial progress for the EEG interface
 - Upgrade the difficulty mechanism to instead of basing it on the past N trials (i.e. moving average)
 - Send mark instructions via the EEG interface whilst conducting pilot trials
 
 <!-- more -->
+
+## Ideas for later
+Rather than using buttons for the four quadrants to answer where the colour change was perceived, use a joystick. Apparently to obtain the joystick input use:
+
+``[x, y, z, buttons] = WinJoystickMex(0);``
+
+But we will investigate that after consolidating with the project's leading neuroscientist / psychologist.
 
 # Some detail
 

@@ -31,7 +31,7 @@ for trial = 1:self.trialCount
     % Depending on whether the trial is an active one...
     if self.trialActive(trial) == 1
         % ...set a random square to change colour
-        self.squareIndex = randi([1 self.squareGrid(1)*self.squareGrid(2)]);
+        self.squareIndex = randi([1 self.squares]);
     else
         % ...set no square to change colour
         self.squareIndex = 0;

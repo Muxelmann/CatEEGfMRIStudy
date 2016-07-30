@@ -12,13 +12,13 @@ self.fixationCoords = [xCoords; yCoords];
 
 % Then compute the grid of squares
 
-xSquares = 6;
-ySquares = 6;
+xSquares = self.squareGrid(1);
+ySquares = self.squareGrid(2);
 vSpace = 50;
 hSpace = 0;
 
 % The total number of squares
-squares = xSquares*ySquares;
+self.squares = xSquares*ySquares;
 
 % Compute the size of a quadrant so we don't need to do it
 % again for each placement of the squares
@@ -41,7 +41,7 @@ xGap = (quadWidth - xSquares*halfSquare)/xSquares;
 yGap = (quadHeight - ySquares*halfSquare)/ySquares;
 
 % Make the grid
-xPos = nan(squares,1);
+xPos = nan(self.squares, 1);
 yPos = xPos;
 xIndex = xPos;
 yIndex = xPos;
@@ -80,7 +80,7 @@ end
 baseRect = [0 0 squareSize squareSize];
 
 % Get the coordinates for all rectangles
-self.allRects = nan(4, squares);
+self.allRects = nan(4, self.squares);
 for i = 1:size(self.allRects,2)
     self.allRects(:,i) = ...
         CenterRectOnPoint(baseRect, xPos(i), yPos(i));
@@ -91,7 +91,7 @@ if ~skipSquareTest
     self = self.printMessage(['Square alignment test\n\n'...
         'Press any key to continue'], 2);
     
-    self.rectColours = [self.rectColourSet' ones(3,squares-7)]; %[repmat([0; 1; 1; 1],1,squares/2) ones(4,squares/2)];
+    self.rectColours = [self.rectColourSet' ones(3,self.squares-7)];
     % Draw all rectangles
     self.drawSquares();
     % Draws the fixation cross

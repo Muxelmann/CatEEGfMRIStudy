@@ -26,6 +26,8 @@ classdef CatStudy
     
     properties (Access = protected)
         % Properties to do with drawing elements on the screen
+        squares = 0;
+        squareGrid = [6, 6];
         
         % Fixation cross line width
         fixationCrossLineWidth = 2;

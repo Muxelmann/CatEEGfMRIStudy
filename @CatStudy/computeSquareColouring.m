@@ -3,7 +3,7 @@ function self = computeSquareColouring(self)
 % change occurred
 
 % The total number of squares
-squares = self.squareGrid(1) * self.squareGrid(2);
+squares = self.squares;
 
 if self.squareIndex > 0
     % If a square will change colour find out where it sits

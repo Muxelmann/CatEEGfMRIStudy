@@ -15,7 +15,7 @@ trialCount = 10;
 blockCount = 8;
 
 % Initialises the study
-catStudy = CatStudy(skipSync, skipSquareTest);
+catStudy = CatStudy(skipSync, skipSquareTest, 3);
 % catStudy.egg('Secret Name');
 
 % Runs through the blocks

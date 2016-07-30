@@ -15,7 +15,7 @@ The `CatStudy` Class is used and it provides all the functionality to interface 
 Every single file is commented and should be very self-explanatory.
 
 ## TODOs
-- Either add non-changing squares along the centre and middle axis or increase the gap between top and bottom, and left and right squares
+- Either add non-changing squares along the centre and middle axis or increase the gap between top and bottom, and left and right squares (progress in [better-squares](https://github.com/Muxelmann/CatEEGfMRIStudy/tree/better-squares) branch)
 - Add a "pause" screen to display in between blocks
 - Write the EEG interface to send time signals to EEG computer over some COM/Serial/Parallel port
 - Write finite state machine (FSM) to keep track of the trial progress for the EEG interface

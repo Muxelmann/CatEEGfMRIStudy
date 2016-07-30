@@ -46,11 +46,11 @@ run.m | N | A sample MATLAB code, demonstrating how to use the `CatStudy` class.
 
 Upon launch, the code will, by default, generate a `6x6` grid of squares that can be coloured in yellow, magenta, cyan, red, green, blue or white. These colours are binary combinations of the RGB colour values. Additionally, the vertical and horizontal space between each quadrant of the screen can be manually adjusted. This was done to give the subject a better indication of *up* and *down* as well as *left* and *right*. The test grid should look like so:
 
-![Grid of 6x6 squqres](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/squares_grid.png)
+![Grid of 6x6 squqres](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/better-squares/supporting/squares_grid.png)
 
 Then the answering rectangles are displayed. Each one covers one quarter of the screen over which a change might have occurred. The numbering of these rectangles has not been finalised (as they need to match the input), but they align and display correctly.
 
-![Four answering rectangles](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/answer_grid.png)
+![Four answering rectangles](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/better-squares/supporting/answer_grid.png)
 
 After this alignment test, the trial starts, where `n*2` squares are displayed. There is an equal number of squares to the left and right half of the screen. One square may or may not change colour and the subject has to identify where this square was, if it did change colour. Initially there are only two squares in total (i.e. `n=1`), but as the subject localises the colour change (or no change) correctly, `n` is incremented until a balance between right and wrong answers is reached. This procedure is called a "trial" and consists of:
 
@@ -59,8 +59,8 @@ After this alignment test, the trial starts, where `n*2` squares are displayed. 
 3. Retention Interval: *An empty screen with a fixation cross is displayed, and replaces the Memory Array. The EEG computer is also notified of this event.*
 4. Test Array: *The second set of squares, where all squares are in the same location is displayed. One square may have changed colour. The appearance of the Test Array is also transmitted to the EEG computer.*
 
-![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/sample_trial_01.png)
-![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/sample_trial_02.png)
+![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/better-squares/supporting/sample_trial_01.png)
+![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/better-squares/supporting/sample_trial_02.png)
 
 After each trial, the subject is asked to answer a set of questions to determine whether there was a change, where the change was, and how certain the subject is with his/her answers. Correspondingly, the instance the subject presses an answer button, the EEG computer is notified of the corresponding answer, to mark this decision making in the recorded data.
 

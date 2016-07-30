@@ -15,7 +15,6 @@ The `CatStudy` Class is used and it provides all the functionality to interface 
 Every single file is commented and should be very self-explanatory.
 
 ## TODOs
-- Either add non-changing squares along the centre and middle axis or increase the gap between top and bottom, and left and right squares
 - Add a "pause" screen to display in between blocks
 - Write the EEG interface to send time signals to EEG computer over some COM/Serial/Parallel port
 - Write finite state machine (FSM) to keep track of the trial progress for the EEG interface
@@ -45,11 +44,11 @@ run.m | N | A sample MATLAB code, demonstrating how to use the `CatStudy` class.
 
 ## Trial execution
 
-Upon launch, the code will, by default, generate a `6x6` grid of squares that can be coloured in yellow, magenta, cyan, red, green, blue or white. These colours are binary combinations of the RGB colour values. The test grid should look like so:
+Upon launch, the code will, by default, generate a `6x6` grid of squares that can be coloured in yellow, magenta, cyan, red, green, blue or white. These colours are binary combinations of the RGB colour values. Additionally, the vertical and horizontal space between each quadrant of the screen can be manually adjusted. This was done to give the subject a better indication of *up* and *down* as well as *left* and *right*. The test grid should look like so:
 
 ![Grid of 6x6 squqres](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/squares_grid.png)
 
-Then the answering rectangles are displayed to assure they cover all quarters of the screen. The colours and numbering of these rectangles have not been finalised, but they align and display correctly.
+Then the answering rectangles are displayed. Each one covers one quarter of the screen over which a change might have occurred. The numbering of these rectangles has not been finalised (as they need to match the input), but they align and display correctly.
 
 ![Four answering rectangles](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/answer_grid.png)
 
@@ -60,7 +59,8 @@ After this alignment test, the trial starts, where `n*2` squares are displayed. 
 3. Retention Interval: *An empty screen with a fixation cross is displayed, and replaces the Memory Array. The EEG computer is also notified of this event.*
 4. Test Array: *The second set of squares, where all squares are in the same location is displayed. One square may have changed colour. The appearance of the Test Array is also transmitted to the EEG computer.*
 
-![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/sample_trial.png)
+![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/sample_trial_01.png)
+![Sample trial](https://raw.githubusercontent.com/Muxelmann/CatEEGfMRIStudy/master/supporting/sample_trial_02.png)
 
 After each trial, the subject is asked to answer a set of questions to determine whether there was a change, where the change was, and how certain the subject is with his/her answers. Correspondingly, the instance the subject presses an answer button, the EEG computer is notified of the corresponding answer, to mark this decision making in the recorded data.
 

@@ -14,7 +14,7 @@ self.fixationCoords = [xCoords; yCoords];
 
 xSquares = 6;
 ySquares = 6;
-vSpace = 50;
+vSpace = 100;
 hSpace = 0;
 
 % The total number of squares
@@ -22,15 +22,15 @@ squares = xSquares*ySquares;
 
 % Compute the size of a quadrant so we don't need to do it
 % again for each placement of the squares
-quadWidth = (self.windowWidth-hSpace) / 2;
-quadHeight = (self.windowHeight-vSpace) / 2;
+quadWidth = self.windowWidth / 2;
+quadHeight = self.windowHeight / 2;
 
 % Find the maximum square size if nine could be displayed in a
 % single quadrant. Here I defined a maximum of 2x3 squares per
 % single quadrant
 squareSize = min(...
-    (self.windowWidth - hSpace)/xSquares,...
-    (self.windowHeight - vSpace)/ySquares) - 20;
+    (self.windowWidth - /xSquares - hSpace,...
+    self.windowHeight/ySquares - vSpace) - 20;
 
 % Generate the grid of rectangles...
 
@@ -56,22 +56,22 @@ for i = 1:xSquares;
         if xIndex(k) < 0
             xPos(k) = self.windowXCentre + ...
                 xIndex(k)*(halfSquare+xGap) - ...
-                hSpace / 2;
+                vSpace / 2;
         else
             xPos(k) = self.windowXCentre + ...
                 xIndex(k)*(halfSquare+xGap) + ...
-                hSpace / 2;
+                vSpace / 2;
         end
         
         yIndex(k) = (j-ySquares/2-0.5)*2;
         if yIndex(k) < 0
             yPos(k) = self.windowYCentre + ...
                 yIndex(k)*(halfSquare+yGap) - ...
-                vSpace / 2;
+                hSpace / 2;
         else
             yPos(k) = self.windowYCentre + ...
                 yIndex(k)*(halfSquare+yGap) + ...
-                vSpace / 2;
+                hSpace / 2;
         end
     end
 end
@@ -109,7 +109,7 @@ end
 % Initialise the answer rects
 self.answerRects = nan(4,4);
 
-quarterRect = [0 0 self.windowWidth/2 self.windowHeight/2] * 0.95;
+quarterRect = [0 0 self.windowWidth/2 self.windowHeight/2] * 0.99;
 self.answerRects(:,1) = CenterRectOnPoint(quarterRect, ...
     self.windowWidth/4, self.windowHeight/4);
 self.answerRects(:,2) = CenterRectOnPoint(quarterRect, ...

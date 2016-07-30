@@ -69,14 +69,11 @@ classdef CatStudy
     % Properties that can be read from the outside, but only set from
     % within the class
     properties (SetAccess = protected)
-        squareGrid = [6 6];
         % Number of squares on one side. Effectively half the actual number
         % of squares that is displayed!
         squareCount = 1;
         % The index of the square that will change colour upon refresh
         squareIndex = 1;
-        % Square side length
-        squareSize = 0;
         % How long the squares are displayed in seconds
         periodDisplay = 0.5;
         % How long to wait for an answer by the user

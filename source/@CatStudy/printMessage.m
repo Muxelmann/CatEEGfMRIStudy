@@ -10,7 +10,8 @@ button = nan;
 % Calculate how many frames to display the text for
 framesToWait = round(duration / self.ifi);
 % Display the text for x-many frames, i.e. the duration
-for frame = 1:framesToWait
+frame = 1;
+while frame <= framesToWait
     DrawFormattedText(self.window, message, ...
         'center', 'center', self.white);
     self = self.flip();
@@ -26,7 +27,12 @@ for frame = 1:framesToWait
             keyCode = tmpkeyCode(1);
             % Obtain which button was pressed
             button = self.decodeKeyCode(keyCode);
+            % Once a valid button was pressed, continue...
+            if ~isnan(button)
+                frame = framesToWait;
+            end
         end
     end
+    frame = frame + 1;
 end
 end

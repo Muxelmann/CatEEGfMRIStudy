@@ -8,20 +8,24 @@ button = nan(1,4);
 [self, button(1)] = self.printMessage( ...
     self.textAnswer{1}, self.periodAnswer(1), ...
     self.answerButtons(1:2));
+self.wait(0.25)
 
 % Ask the user how certain he/she was
 [self, button(2)] = self.printMessage( ...
     self.textAnswer{2}, self.periodAnswer(2), ...
     self.answerButtons);
+self.wait(0.25)
 
 % Only ask where the change was if the user observed one
 if button(1) == 1
     
     % Ask where the change was observed
     [self, button(3)] = self.printQuarters(self.periodAnswer(3), self.answerButtons);
+    self.wait(0.25)
     
     % Ask the user how certain he/she was
     [self, button(4)] = self.printMessage(self.textAnswer{2}, self.periodAnswer(4), self.answerButtons);
+    self.wait(0.25)
     
 end
 

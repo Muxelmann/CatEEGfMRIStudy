@@ -201,6 +201,8 @@ classdef CatStudy
         tidyUp(~)
         
         self = egg(self, varargin)
+        
+        self = pauseScreen(self)
     end
     
     methods (Access = protected)

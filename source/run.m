@@ -15,7 +15,7 @@ trialCount = 10;
 blockCount = 8;
 
 % Initialises the study
-catStudy = CatStudy(skipSync, skipSquareTest, 3);
+catStudy = CatStudy(skipSync, skipSquareTest);
 % catStudy.egg('Secret Name');
 
 % Runs through the blocks
@@ -24,6 +24,8 @@ for blockNumber = 1:blockCount
     catStudy = catStudy.runTrials(trialCount);
     % Saves the block's data (for all trials) in the output file
     catStudy.saveTrial([saveName '_block' num2str(blockNumber)]);
+    % Pause until a button is pressed
+    catStudy.pauseScreen();
 end
 
 % Closes all screens and does some tidyig (if required)

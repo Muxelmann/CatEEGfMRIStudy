@@ -10,7 +10,8 @@ button = nan;
 % for
 framesToWait = round(duration / self.ifi);
 % Display the text for x-many frames, i.e. the duration
-for frame = 1:framesToWait
+frame = 1;
+while frame <= framesToWait
     % Draw the quarter colouring
     self.drawQuarters();
     % Draws the fixation cross
@@ -29,7 +30,12 @@ for frame = 1:framesToWait
             keyCode = tmpkeyCode(1);
             % Obtain which button was pressed
             button = self.decodeKeyCode(keyCode);
+            % Once a valid button was pressed, continue...
+            if ~isnan(button)
+                frame = framesToWait;
+            end
         end
     end
+    frame = frame + 1;
 end
 end

@@ -15,7 +15,6 @@ The `CatStudy` Class is used and it provides all the functionality to interface 
 Every single file is commented and should be very self-explanatory.
 
 ## TODOs
-- Add a "pause" screen to display in between blocks
 - Write the EEG interface to send time signals to EEG computer over some COM/Serial/Parallel port
 - Write finite state machine (FSM) to keep track of the trial progress for the EEG interface
 - Upgrade the difficulty mechanism to instead of basing it on the past N trials (i.e. moving average)
